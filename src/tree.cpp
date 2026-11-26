@@ -247,3 +247,12 @@ int tree::maxDepthBFS(nodeTree* root){
 int tree::maxDepthBFS(){
     return maxDepthBFS(root);
 }
+
+void tree::destroyTree(nodeTree* root){
+    if(root == NULL){
+        return;
+    }
+    destroyTree(root->left);
+    destroyTree(root->right);
+    delete root;
+}

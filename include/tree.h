@@ -33,6 +33,11 @@ class tree{
     int maxDepthRec();
     int maxDepthBFS(nodeTree* root);
     int maxDepthBFS();
+    void destroyTree(nodeTree* root);
+    ~tree(){
+        destroyTree(root);
+        root=NULL;
+    }
 };
 
 #endif
