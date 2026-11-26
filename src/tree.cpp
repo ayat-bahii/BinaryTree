@@ -208,7 +208,7 @@ int tree::maxi(int ldepth,int rdepth){
 
 int tree::maxDepthRec(nodeTree* root){
     if(root==NULL){
-        return -1;
+        return 0;
     }
     int ldepth=maxDepthRec(root->left);
     int rdepth=maxDepthRec(root->right);
@@ -241,7 +241,7 @@ int tree::maxDepthBFS(nodeTree* root){
         }
         maxH++;
     }
-    return maxH-1;
+    return maxH;
 }
 
 int tree::maxDepthBFS(){
